@@ -1,6 +1,5 @@
 import { marshall, unmarshall } from '@aws-sdk/util-dynamodb';
 import AWS from 'aws-sdk';
-import { table } from 'console';
 import dotenv from 'dotenv';
 import { TweetFormatted } from './types/twitter';
 
