@@ -11,8 +11,8 @@ resource "aws_security_group" "ecs_sg" {
   name = "${var.app_name}-ecs-sg"
 
   ingress {
-    from_port = 80
-    to_port = 80
+    from_port = 0
+    to_port = 0
     protocol = "-1"
     security_groups = [aws_security_group.lb_sg.id]
   }
