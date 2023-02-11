@@ -1,17 +1,17 @@
 variable "aws_vpc_id" {
   type          = string
   description   = "AWS VPC ID deployed from network repo"
-  default       = "vpc-022a7e2f1347546c8" # CHANGE TO YOUR OWN VPC ID
+  default       = "vpc-0d4deaab6638ac0c8" # CHANGE TO YOUR OWN VPC ID
 }
 
 variable "aws_public_subnet_ids" {
   description = "public subnet ids"
-  default     = ["subnet-0d308d8683399a57f", "subnet-0fe876cb0b59a4d70"] # CHANGE TO YOUR SUBNET IDS
+  default     = ["subnet-04d50dcb4f6285835", "subnet-05c12f816bbb5f602"] # CHANGE TO YOUR SUBNET IDS
 }
 
 variable "aws_private_subnet_ids" {
   description = "private subnet ids"
-  default     = ["subnet-01323a6dc7768cc27", "subnet-03f9393efbd59b242"] # CHANGE TO YOUR SUBNET IDS
+  default     = ["subnet-0e938cb334f2fc7d2", "subnet-04f32c9277eacc77e"] # CHANGE TO YOUR SUBNET IDS
 }
 
 variable "aws_region" {
