@@ -131,6 +131,7 @@ const parseTweet = (stream: TweetStream): TweetFormatted | Error => {
 }
 
 const connectStream = (retryAttempt: number = 0) => {
+    console.log('Stream URL', STREAM_URL);
     const stream = needle.get(STREAM_URL, {
         headers: {
             'authorization': `Bearer ${TOKEN}`
@@ -200,6 +201,7 @@ export const streamVendors = async (vendorList: string[]) => {
             value: `has:geo (from:${vendorList.join(' OR from:')})`,
             tag: 'vendors-geo'
         }];
+        console.log('All rules', JSON.stringify(rules));
         await setRules(rules);
     } catch(e) {
         if (e instanceof Error) {

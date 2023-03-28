@@ -14,11 +14,7 @@ variable "aws_private_subnet_ids" {
   default     = ["subnet-007cf08e5b4270707", "subnet-0707c6621af08c977"] # CHANGE TO YOUR SUBNET IDS
 }
 
-variable "aws_region" {
-  type        = string
-  description = "AWS Region"
-  default     = "us-east-1"
-}
+variable "aws_region" {}
 
 variable "app_name" {
   type        = string
@@ -47,3 +43,4 @@ variable "sqs_queue_name" {
 }
 
 variable "image_tag" {}
+
