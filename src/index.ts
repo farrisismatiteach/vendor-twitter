@@ -11,7 +11,6 @@ const init = async () => {
     try {
         const vendors = await getAllScanResults<Vendor>(process.env.AWS_VENDORS_TABLE_NAME ?? '');
         const vendorList = vendors.map(vendor => vendor.twitterId);
-        console.log('Vendor List', JSON.stringify(vendorList));
         await streamVendors(vendorList);
 
         const app = express();
