@@ -98,6 +98,7 @@ const deleteAllRules = async (rules: any) => {
 
 const parseTweet = (stream: TweetStream): TweetFormatted | Error => {
     try {
+        console.log(JSON.stringify(stream));
         const user = stream.includes.users[0];
         const tweet = stream.includes.tweets[0];
         const place = stream.includes.places[0];
